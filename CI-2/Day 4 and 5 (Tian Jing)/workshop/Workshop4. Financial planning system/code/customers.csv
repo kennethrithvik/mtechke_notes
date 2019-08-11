@@ -1,0 +1,8 @@
+No,Monthly income,Total assets,Age,Willingness to take risk,Dependence expense,Ratio of Living expenses/Total assets,Big-item expenses,customer profile
+1,2500,400000,65,0.35,1,20,1,poor elderly supporting many dependents
+2,7500,900000,35,0.65,7,11,6.5,middle-class middle-age family man
+3,1000,100000,80,0.1,9,15,9,poor retired elderly with little savings
+4,10000,1000000,25,0.5,5,3,1,young single professional who live simple life
+5,10000,1000000,25,0.5,5,20,1,young single professional who live a high life
+6,10000,1000000,25,0.9,5,3,1,young single professional who live simple life and want to take more risk
+7,1000,1000000,80,0.5,9,10,9,retired rich businessman

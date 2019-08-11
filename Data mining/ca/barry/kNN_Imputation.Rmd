@@ -1,0 +1,41 @@
+---
+title: "Data_Imputation_KNN"
+output: html_document
+---
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+vehicle = read.csv("/Users/anjalisinha/Documents/MTech KE/Sem 1/DMMM/Day8/vehicle_safety_NASS2010_2000_2012.csv", header=T, na.strings=c("","NA"))
+```
+
+## Install VIM Package
+```{r}
+install.packages("VIM")
+library(VIM)
+```
+
+
+## Study the data
+```{r}
+summary(vehicle)
+data(vehicle)
+str(vehicle)
+```
+
+
+## kNN Imputation
+```{r}
+vehicle2 <- kNN(vehicle)
+```
+
+
+## Saving the data.frame with imputed values
+```{r}
+write.csv(vehicle2, file = "/Users/anjalisinha/Documents/MTech KE/Sem 1/DMMM/Day8/knn_impute_vehicle_safety_NASS2010_2000_2012.csv")
+```
+

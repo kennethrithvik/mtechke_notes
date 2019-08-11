@@ -1,0 +1,7 @@
+https://www.clarifai.com/demo
+
+http://yann.lecun.com/exdb/lenet/index.html
+
+https://lecture-demo.ira.uka.de/neural-network-demo/
+
+http://playground.tensorflow.org/

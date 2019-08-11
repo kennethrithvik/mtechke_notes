@@ -1,0 +1,89 @@
+---
+title: "Bayesian CA"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+## R Markdown
+
+## Read the data file
+
+```{r }
+vehicle <- read.csv("vehicle_safety_NASS2010_2000_2012.csv")
+```
+
+## Summary
+
+Checking the Summary of the data frame:
+
+```{r summary}
+summary(vehicle)
+```
+
+## Remove Empty Rows where output variable is NA or ""
+```{r Removing}
+vehicle_modified <- vehicle[!(is.na(vehicle$OA_MAIS) | vehicle$OA_MAIS == ""), ]
+summary(vehicle_modified)
+```
+
+
+## Call the required Packages
+```{r}
+#install.packages("lattice")
+#install.packages("mice")
+#install.packages("VIM")
+library(lattice)
+library(mice)
+library(VIM)
+```
+
+## Subset of only continuous columns
+```{r}
+vehicle_numerical <- subset(vehicle_modified, select = -c(OA_BAGDEPLY,OA_SEX,OA_MANUSE,GV_WGTCDTR,VE_GAD1))
+
+summary(vehicle_numerical)
+write.csv(vehicle_numerical,"vehicle_Continuous.csv")
+```
+
+
+## Find the Pattern and Plot it to Identify the missing values in each column
+```{r}
+md.pattern(vehicle_numerical)
+
+mice_plot <- aggr(vehicle_numerical, col=c('navyblue','yellow'),
+                    numbers=TRUE, sortVars=TRUE, bars=TRUE, prop = TRUE,
+                    labels=names(vehicle_numerical), cex.axis=.7,
+                    gap=3, ylab=c("Missing data","Pattern"))
+
+```
+
+## Imputing using MICE 
+```{r}
+vehicle_imputed <- mice(vehicle_numerical, m=2, maxit = 50, method = 'pmm', seed = 500)
+
+#Here is an explanation of the parameters used:
+
+#m  - Refers to 2 imputed data sets
+#maxit - Refers to no. of iterations taken to impute missing values
+#method - Refers to method used in imputation. we used predictive mean matching.
+```
+
+## Selecting from the imputed data
+
+```{r}
+#Shows the 2 iterations set
+vehicle_imputed$imp$GV_CURBWGT
+
+# Selecting the second set 
+vehicle_New <- complete(vehicle_imputed,2)
+summary(vehicle_New)
+write.csv(vehicle_New,"vehicle_New.csv")
+```
+
+
+
+
+
+
+

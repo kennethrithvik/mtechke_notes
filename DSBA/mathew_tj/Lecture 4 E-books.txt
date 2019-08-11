@@ -1,0 +1,8 @@
+
+The following 4 E-books (PDF files) are available at https://goo.gl/1SVfqZ
+
+
+1. Digital Image Processing, Gonzalez, 3rd Edition,
+2. Digital Image Processing, Gonzalez, 3rd Edition, Solution Manual,
+3. OpenCV by Example, Packet,
+4. Practical Python and OpenCV, Adrian.

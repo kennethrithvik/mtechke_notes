@@ -1,0 +1,95 @@
+---
+title: "Mod 3.3: R Workshop on RFM Analysis"
+author: "Eric Tham"
+date: "2 May 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+This is a workshop on computing RFM modified from the Kaggle website. \url{https://www.kaggle.com/hendraherviawan/customer-segmentation-using-rfm-analysis-r}
+RFM stands for the three dimensions:
+1. Recency - How recently did the customer purchase?
+2. Frequency - How often do they purchase?
+3. Monetary Value - How much do they spend?
+
+Reading in the data that is downloaded from Kaggle website. 
+```{r}
+library(data.table)
+library(dplyr)
+library(ggplot2)
+#library(stringr)
+#library(DT)
+library(tidyr)
+library(knitr)
+library(rmarkdown)
+
+df_data <- fread('customerdata.csv')
+glimpse(df_data)
+```
+
+## Cleaning data  
+```{r observe, echo=FALSE}
+df_data <- df_data %>% 
+  mutate(Quantity = replace(Quantity, Quantity<=0, NA),
+         UnitPrice = replace(UnitPrice, UnitPrice<=0, NA))
+
+df_data <- df_data %>%
+  drop_na()
+```
+
+## Recode variables
+```{r}
+df_data <- df_data %>% 
+  mutate(InvoiceNo=as.factor(InvoiceNo), StockCode=as.factor(StockCode), 
+         InvoiceDate=as.Date(InvoiceDate, '%m/%d/%Y %H:%M'), CustomerID=as.factor(CustomerID), 
+         Country=as.factor(Country))
+
+df_data <- df_data %>% 
+  mutate(total_dolar = Quantity*UnitPrice)
+
+glimpse(df_data)
+structure(df_data)
+```
+
+```{r}
+df_RFM <- df_data %>% 
+  dplyr::group_by(CustomerID) %>% 
+  dplyr::summarise(recency=as.numeric(as.Date("2012-01-01")-max(InvoiceDate)),
+            frequenci=n_distinct(InvoiceNo), monitery= sum(total_dolar)/n_distinct(InvoiceNo)) 
+
+summary(df_RFM)
+structure(df_RFM)
+
+```
+## Histogram of the RFM
+```{r}
+hist(df_RFM$recency)
+```
+```{r}
+hist(df_RFM$frequenci, breaks = 50)
+```
+## Applying hurdle
+Only the rows with frequency greater than 1 are filtered.
+```{r}
+df_RFM_Hurdle <- df_RFM[df_RFM$frequenci > 1,]
+```
+
+## Cutting dataframe by quartiles of R, F or M
+Sorting the dataframe cut by the cut quartiles, and examining the individual group properties. 
+```{r}
+df_RFM$q_rec <- ntile(df_RFM$frequenci,4)  # part of the dplyr library
+df_RFM <- df_RFM[order(df_RFM$q_rec),]     # sorting the cut rows of the RFM
+
+# f1 <- function(x) c(Mean = mean(x), Max = max(x), SD = sd(x))
+df_RFM_grouppty <- aggregate(df_RFM[,c("monitery","recency")],list(df_RFM$q_rec), mean)
+```
+The properties of the quartile group by frequency for say the monetary can be examined as well.
+```{r}
+library(plyr)
+ddply(df_RFM, ~q_rec, summarise, mean=mean(monitery), sd=sd(monitery))
+```
+

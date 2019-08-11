@@ -1,0 +1,23 @@
+year,sector,patents_applied,patents_awarded,patents_owned
+2000,Public Sector,185,45,223
+2000,Private Sector,717,240,1045
+2005,Public Sector,427,151,772
+2005,Private Sector,1167,726,2703
+2006,Public Sector,475,156,965
+2006,Private Sector,1561,777,3752
+2007,Public Sector,312,162,1121
+2007,Private Sector,1415,791,4664
+2008,Public Sector,354,144,1011
+2008,Private Sector,1227,586,4444
+2009,Public Sector,445,176,1519
+2009,Private Sector,1124,571,4548
+2010,Public Sector,499,131,998
+2010,Private Sector,1263,522,4452
+2011,Public Sector,608,176,1208
+2011,Private Sector,1305,679,3555
+2012,Public Sector,698,155,1251
+2012,Private Sector,1024,665,3878
+2013,Public Sector,821,217,1295
+2013,Private Sector,1323,717,3980
+2014,Public Sector,834,204,1356
+2014,Private Sector,1131,707,5223

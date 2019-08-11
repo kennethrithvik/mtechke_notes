@@ -1,0 +1,126 @@
+year,sector,type_of_rnd_manpower,fte
+2014,Private Sector,PhD,1693.5
+2014,Private Sector,Masters,4732.2
+2014,Private Sector,Bachelors,10442.5
+2014,Private Sector,Non Degree,1652.4
+2014,Private Sector,Technicians,1483.3
+2014,Private Sector,Other Supporting Staff,1637.4
+2014,Government Sector,PhD,422.9
+2014,Government Sector,Masters,576.9
+2014,Government Sector,Bachelors,902.4
+2014,Government Sector,Non Degree,47.8
+2014,Government Sector,Technicians,460.2
+2014,Government Sector,Other Supporting Staff,1086.5
+2014,Higher Education Sector,PhD,3636.1
+2014,Higher Education Sector,Masters,1192.5
+2014,Higher Education Sector,Bachelors,1738.1
+2014,Higher Education Sector,Non Degree,71.3
+2014,Higher Education Sector,Post Graduate,5800.0
+2014,Higher Education Sector,Technicians,258.8
+2014,Higher Education Sector,Other Supporting Staff,424.9
+2014,Public Research Institutes,PhD,2219.9
+2014,Public Research Institutes,Masters,555.3
+2014,Public Research Institutes,Bachelors,922.2
+2014,Public Research Institutes,Non Degree,59.8
+2014,Public Research Institutes,Technicians,288.0
+2014,Public Research Institutes,Other Supporting Staff,237.8
+2013,Private Sector,PhD,1573.3
+2013,Private Sector,Masters,4468.8
+2013,Private Sector,Bachelors,10392.6
+2013,Private Sector,Non Degree,1893.8
+2013,Private Sector,Technicians,1431.4
+2013,Private Sector,Other Supporting Staff,1589.1
+2013,Government Sector,PhD,345.4
+2013,Government Sector,Masters,571.4
+2013,Government Sector,Bachelors,888.7
+2013,Government Sector,Non Degree,38.0
+2013,Government Sector,Technicians,402.9
+2013,Government Sector,Other Supporting Staff,888.1
+2013,Higher Education Sector,PhD,3454.3
+2013,Higher Education Sector,Masters,1255.6
+2013,Higher Education Sector,Bachelors,1649.0
+2013,Higher Education Sector,Non Degree,61.0
+2013,Higher Education Sector,Post Graduate,6012.0
+2013,Higher Education Sector,Technicians,232.8
+2013,Higher Education Sector,Other Supporting Staff,347.8
+2013,Public Research Institutes,PhD,2064.1
+2013,Public Research Institutes,Masters,513.4
+2013,Public Research Institutes,Bachelors,792.9
+2013,Public Research Institutes,Non Degree,51.3
+2013,Public Research Institutes,Technicians,410.7
+2013,Public Research Institutes,Other Supporting Staff,254.0
+2012,Private Sector,PhD,1460.0
+2012,Private Sector,Masters,4165.5
+2012,Private Sector,Bachelors,9760.2
+2012,Private Sector,Non Degree,1903.3
+2012,Private Sector,Technicians,1411.3
+2012,Private Sector,Other Supporting Staff,1503.5
+2012,Government Sector,PhD,332.4
+2012,Government Sector,Masters,533.8
+2012,Government Sector,Bachelors,831.4
+2012,Government Sector,Non Degree,58.1
+2012,Government Sector,Technicians,394.6
+2012,Government Sector,Other Supporting Staff,852.9
+2012,Higher Education Sector,PhD,2962.0
+2012,Higher Education Sector,Masters,1181.8
+2012,Higher Education Sector,Bachelors,1598.6
+2012,Higher Education Sector,Non Degree,54.4
+2012,Higher Education Sector,Post Graduate,5924.0
+2012,Higher Education Sector,Technicians,288.6
+2012,Higher Education Sector,Other Supporting Staff,294.8
+2012,Public Research Institutes,PhD,1961.6
+2012,Public Research Institutes,Masters,534.5
+2012,Public Research Institutes,Bachelors,824.4
+2012,Public Research Institutes,Non Degree,55.0
+2012,Public Research Institutes,Technicians,355.6
+2012,Public Research Institutes,Other Supporting Staff,216.8
+2011,Private Sector,PhD,1395.8
+2011,Private Sector,Masters,3972.0
+2011,Private Sector,Bachelors,10020.9
+2011,Private Sector,Non Degree,2043.3
+2011,Private Sector,Technicians,1501.3
+2011,Private Sector,Other Supporting Staff,1473.0
+2011,Government Sector,PhD,391.9
+2011,Government Sector,Masters,523.2
+2011,Government Sector,Bachelors,835.2
+2011,Government Sector,Non Degree,76.6
+2011,Government Sector,Technicians,331.6
+2011,Government Sector,Other Supporting Staff,880.2
+2011,Higher Education Sector,PhD,2494.7
+2011,Higher Education Sector,Masters,1153.9
+2011,Higher Education Sector,Bachelors,1513.8
+2011,Higher Education Sector,Non Degree,41.0
+2011,Higher Education Sector,Post Graduate,5990.0
+2011,Higher Education Sector,Technicians,240.9
+2011,Higher Education Sector,Other Supporting Staff,306.3
+2011,Public Research Institutes,PhD,1849.2
+2011,Public Research Institutes,Masters,553.2
+2011,Public Research Institutes,Bachelors,806.2
+2011,Public Research Institutes,Non Degree,57.8
+2011,Public Research Institutes,Technicians,338.9
+2011,Public Research Institutes,Other Supporting Staff,205.3
+2010,Private Sector,PhD,1309.1
+2010,Private Sector,Masters,3579.4
+2010,Private Sector,Bachelors,9629.6
+2010,Private Sector,Non Degree,1989.4
+2010,Private Sector,Technicians,1326.0
+2010,Private Sector,Other Supporting Staff,1335.1
+2010,Government Sector,PhD,360.6
+2010,Government Sector,Masters,513.3
+2010,Government Sector,Bachelors,807.0
+2010,Government Sector,Non Degree,76.3
+2010,Government Sector,Technicians,387.1
+2010,Government Sector,Other Supporting Staff,822.8
+2010,Higher Education Sector,PhD,2306.1
+2010,Higher Education Sector,Masters,1084.3
+2010,Higher Education Sector,Bachelors,1434.6
+2010,Higher Education Sector,Non Degree,30.8
+2010,Higher Education Sector,Post Graduate,5760.0
+2010,Higher Education Sector,Technicians,231.0
+2010,Higher Education Sector,Other Supporting Staff,286.5
+2010,Public Research Institutes,PhD,1792.2
+2010,Public Research Institutes,Masters,535.1
+2010,Public Research Institutes,Bachelors,796.4
+2010,Public Research Institutes,Non Degree,26.3
+2010,Public Research Institutes,Technicians,397.4
+2010,Public Research Institutes,Other Supporting Staff,196.5
